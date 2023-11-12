@@ -17,11 +17,11 @@ public class InsertionSort
             }
             else
             {
-                texto += "," + item;
+                texto += item + " |";
             }
 
         }
-        System.out.println(texto);
+        System.out.println(" Vetor - [" + texto + "]");
     }
     public void ordenar(int[] vetor)
     {
