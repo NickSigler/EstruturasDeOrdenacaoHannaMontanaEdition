@@ -18,7 +18,7 @@ public class BubbleSort
             array[numero] = array[numero + 1];
             array[numero + 1] = analisando;
             analisando++;
-            
+
             System.out.println("Estado atual do array: " + Arrays.toString(array));
 
             ordenar(1, analisando);
