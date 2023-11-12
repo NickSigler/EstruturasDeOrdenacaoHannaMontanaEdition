@@ -18,8 +18,7 @@ public class BubbleSort
             array[numero] = array[numero + 1];
             array[numero + 1] = analisando;
             analisando++;
-
-            // Imprimir o estado do array antes da chamada recursiva
+            
             System.out.println("Estado atual do array: " + Arrays.toString(array));
 
             ordenar(1, analisando);

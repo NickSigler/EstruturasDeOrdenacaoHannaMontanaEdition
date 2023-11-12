@@ -7,11 +7,9 @@ public class QuickSort
     }
     public void ordenar(int[] vetor, int troca, int analisa)
     {
-
         int troca1 = vetor[troca];
         int analisa1 = vetor[analisa];
         int pivot = vetor[vetor.length - 1];
-
 
         if(analisa == vetor.length - 1)
         {

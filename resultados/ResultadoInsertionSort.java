@@ -6,6 +6,7 @@ public class ResultadoInsertionSort
 {
     public static void main(String[] args)
     {
+
         int[] array = new int[20];
 
         array[0] = 49;
