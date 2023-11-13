@@ -13,7 +13,6 @@ public class BubbleSort
     public void ordenar(int tamanho, int numero)
     {
 
-        
         int analisando = array[numero];
         int contador = 0;
         for(int i = 0; i < array.length; i++)

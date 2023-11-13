@@ -4,6 +4,7 @@ public class QuickSort
 {
     public QuickSort()
     {
+
     }
     public void ordenar(int[] vetor, int troca, int analisa)
     {
