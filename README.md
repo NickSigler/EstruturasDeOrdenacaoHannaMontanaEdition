@@ -59,5 +59,4 @@ Esta classe contém o método `main` para demonstrar o uso da classe `InsertionS
 ---
 
 **Autor:** Nicolas Blaskovski, Thomas Pickler 
-**Contato:** seu.email@example.com  
 **Última Atualização:** 13/11/2023
