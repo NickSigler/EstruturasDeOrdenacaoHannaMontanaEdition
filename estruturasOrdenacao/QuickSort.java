@@ -18,21 +18,32 @@ public class QuickSort
             vetor[troca] = vetor[vetor.length - 1];
             vetor[analisa] = guardar;
 
-            quebrarVetor(vetor, troca);
+            mostrarVetor(vetor);
+
+            //quebrarVetor(vetor, troca);
 
         }
         else
         {
-            if (analisa1 < pivot) {
+            if (analisa1 < pivot)
+            {
                 int guardar = vetor[troca];
                 vetor[troca] = vetor[analisa];
                 vetor[analisa] = guardar;
 
                 troca++;
                 analisa++;
+
+                mostrarVetor(vetor);
+
                 ordenar(vetor, troca, analisa);
-            } else {
+            }
+            else
+            {
                 analisa++;
+
+                mostrarVetor(vetor);
+
                 ordenar(vetor, troca, analisa);
             }
         }
@@ -72,6 +83,25 @@ public class QuickSort
                 }
             }
         }
+    }
+
+    public void mostrarVetor(int[] vetor)
+    {
+        String texto = "";
+
+        for(int item: vetor)
+        {
+            if(vetor[0] == vetor[vetor.length - 1] )
+            {
+                texto += item;
+            }
+            else
+            {
+                texto += item + " |";
+            }
+
+        }
+        System.out.println(" Vetor - [" + texto + "]");
     }
 
 }

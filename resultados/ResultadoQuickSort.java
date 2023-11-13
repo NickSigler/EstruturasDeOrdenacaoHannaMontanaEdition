@@ -31,6 +31,10 @@ public class ResultadoQuickSort
         array[19] = 28;
 
 
+
+
+
+
         QuickSort quickSort = new QuickSort();
         quickSort.ordenar(array, 0, 0);
 }

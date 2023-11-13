@@ -10,41 +10,59 @@ public class BubbleSort
         this.array = array;
         this.tamanho = tamanho;
     }
-    public void ordenar(int tamanho, int numero, int contador)
+    public void ordenar(int tamanho, int numero)
     {
+
         
         int analisando = array[numero];
-        if(numero == array.length - 1)
+        int contador = 0;
+        for(int i = 0; i < array.length; i++)
         {
-            ordenar(tamanho, 0, 0);
-        }
-        else
-        {
-            
-            if(analisando > array[numero + 1])
+            if (i >= array.length - 1)
             {
+                break;
+            }
+            else if (array[i] <= array[i +1])
+            {
+                contador++;
+            }
+            else
+            {
+                contador = 0;
+            }
+
+        }
+        if(contador == array.length - 1)
+        {
+            System.out.println("Array ordenada");
+        }
+        else if(numero == array.length - 1)
+        {
+            ordenar(tamanho, 0);
+        }
+        else {
+
+            if (analisando > array[numero + 1]) {
                 array[numero] = array[numero + 1];
                 array[numero + 1] = analisando;
                 numero++;
 
                 System.out.println("Estado atual do array: " + Arrays.toString(array));
 
-                ordenar(1, numero, contador);
-            }
-            else if(contador == array.length - 1)
-            {
-                System.out.println("Vetor ordenado!");
+                ordenar(1, numero);
             }
             else
             {
 
                 numero++;
-                contador++;
-                ordenar(tamanho, numero, contador);
-                
+                ordenar(tamanho, numero);
+
 
             }
+
         }
+
+
         
         
         
