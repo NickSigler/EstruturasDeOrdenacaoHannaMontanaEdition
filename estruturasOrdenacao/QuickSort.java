@@ -20,7 +20,7 @@ public class QuickSort
 
             mostrarVetor(vetor);
 
-            //quebrarVetor(vetor, troca);
+            quebrarVetor(vetor, troca);
 
         }
         else
@@ -81,6 +81,25 @@ public class QuickSort
                     }
 
                 }
+                if(verificarVetor(vetorMenor) == true)
+                {
+                    System.out.println("Vetor esta ordenado");
+                }
+                else
+                {
+                    ordenar(vetorMenor, 0, 0);
+                }
+                if(verificarVetor(vetorMaior) == true)
+                {
+                    System.out.println("Vetor esta ordenado");
+                }
+                else
+                {
+                    ordenar(vetorMaior, 0, 0);
+                }
+
+                mostrarVetor(vetorMaior);
+                mostrarVetor(vetorMenor);
             }
         }
     }
@@ -102,6 +121,32 @@ public class QuickSort
 
         }
         System.out.println(" Vetor - [" + texto + "]");
+    }
+
+    public boolean verificarVetor(int[] vetor)
+    {
+        int contador = 0;
+        for(int i = 0; i < vetor.length; i++)
+        {
+            if (i == vetor.length - 1)
+            {
+                break;
+            }
+            else if (vetor[i] <= vetor[i +1])
+            {
+                contador++;
+            }
+            else
+            {
+                contador = 0;
+            }
+
+        }
+        if(contador == vetor.length - 1)
+        {
+            return true;
+        }
+        return false;
     }
 
 }

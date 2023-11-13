@@ -18,7 +18,7 @@ public class BubbleSort
         int contador = 0;
         for(int i = 0; i < array.length; i++)
         {
-            if (i >= array.length - 1)
+            if (i == array.length - 1)
             {
                 break;
             }
